@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  display: flex;
+}
+
+/* If screen width < 600 pixels, switch to a top & bottom layout */
+@media screen and (max-width: 600px) {
+  .App {
+    display: block;
+  }
 }
 
 .App-logo {
@@ -7,32 +15,25 @@
   pointer-events: none;
 }
 
+/* Continual animation placeholder */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.LeftColumn {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Both columns, input and visuals */
+.Column {
+  background-color: white;
+  font-family: "Yanone Kaffeesatz";
+  min-height: 30vh;
   display: flex;
+  flex: 50%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.RightColumn {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
